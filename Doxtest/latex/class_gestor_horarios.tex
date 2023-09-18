@@ -1,0 +1,194 @@
+\hypertarget{class_gestor_horarios}{}\doxysection{Gestor\+Horarios}
+\label{class_gestor_horarios}\index{GestorHorarios@{GestorHorarios}}
+
+
+{\ttfamily \#include \char`\"{}Gestor\+Horarios.\+h\char`\"{}}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_gestor_horarios_aac4f2ee6057f614bc0bc0e7247d83406}{change\+\_\+class}} (string upcode, string class\+\_\+code, string uc\+\_\+code)
+\item 
+vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \mbox{\hyperlink{class_gestor_horarios_af00ef5d5342bfbcd307aec255ab4e480}{estudantes\+\_\+num\+\_\+ano}} (char ano)
+\item 
+vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \mbox{\hyperlink{class_gestor_horarios_a7315c27fafa0b5b3dbaba98b67e5cec0}{estudantes\+\_\+numa\+\_\+turma}} (string class\+\_\+code, string uc\+\_\+code)
+\item 
+vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \mbox{\hyperlink{class_gestor_horarios_ad03d67daec45e5fe96d9940251e70f10}{estudantes\+\_\+numa\+\_\+uc}} (string uc\+\_\+code)
+\item 
+bool \mbox{\hyperlink{class_gestor_horarios_a0885c2912050e5b6380b2a4b3eade6c8}{find\+\_\+class\+\_\+code}} (string class\+\_\+code)
+\item 
+bool \mbox{\hyperlink{class_gestor_horarios_a05830cea2f8febac8456951eab374246}{find\+\_\+student}} (string up)
+\item 
+bool \mbox{\hyperlink{class_gestor_horarios_a18fec1648fe40dac066594a39d95f91e}{find\+\_\+turma}} (string uc\+\_\+code, string class\+\_\+code)
+\item 
+bool \mbox{\hyperlink{class_gestor_horarios_ac3ffdab3dab15d130d9528a4edc1fd81}{find\+\_\+uc}} (string uc\+\_\+code)
+\item 
+vector$<$ \mbox{\hyperlink{class_class}{Class}} $>$ \mbox{\hyperlink{class_gestor_horarios_a5ee43e1cf1bdfd3cdc32ac0b84d45f1b}{horario\+\_\+estudante}} (string up)
+\item 
+vector$<$ \mbox{\hyperlink{class_class}{Class}} $>$ \mbox{\hyperlink{class_gestor_horarios_a1a5083c9643fe281ef08d8d57104c452}{horario\+\_\+turma}} (string class\+\_\+code)
+\item 
+vector$<$ \mbox{\hyperlink{class_class}{Class}} $>$ \mbox{\hyperlink{class_gestor_horarios_ae9bf94a21be59955e91de88c798866f0}{horario\+\_\+turma\+\_\+\+Uc}} (string class\+\_\+code, string uc\+\_\+code)
+\item 
+vector$<$ \mbox{\hyperlink{class_class}{Class}} $>$ \mbox{\hyperlink{class_gestor_horarios_a6457081c42591d657aeb17683149067c}{horario\+\_\+\+Uc}} (string uc\+\_\+code)
+\item 
+int \mbox{\hyperlink{class_gestor_horarios_a0c086985a2affeda661ab45b2be49d8a}{numero\+\_\+estudantes\+\_\+turma}} (string class\+\_\+code, string uc\+\_\+code)
+\item 
+void \mbox{\hyperlink{class_gestor_horarios_a70ce62f79adccedaa221af04d81983cd}{read\+\_\+info\+\_\+classes}} ()
+\item 
+void \mbox{\hyperlink{class_gestor_horarios_a400883b8f8ab554e556c060594e6ba8f}{read\+\_\+info\+\_\+students}} ()
+\item 
+void \mbox{\hyperlink{class_gestor_horarios_a9e59f3e17a3c8c4a3d482c980eb83a89}{read\+\_\+info\+\_\+uc}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const map$<$ string, int $>$ \mbox{\hyperlink{class_gestor_horarios_a96a1aca26160532a77ffd282adfb9109}{week\+Days}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_class}{Class}} $>$ \mbox{\hyperlink{class_gestor_horarios_a68ccf539e047d6673d93bb5d8e0622a3}{classes}}
+\item 
+set$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \mbox{\hyperlink{class_gestor_horarios_a8967f9720e564251b062f5ac0b764ed8}{students}}
+\item 
+vector$<$ \mbox{\hyperlink{class_uc__turma}{Uc\+\_\+turma}} $>$ \mbox{\hyperlink{class_gestor_horarios_a5f4c696a138c58dffa5537abd382d9e0}{ucs}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gestor_horarios_aac4f2ee6057f614bc0bc0e7247d83406}\label{class_gestor_horarios_aac4f2ee6057f614bc0bc0e7247d83406}} 
+\index{GestorHorarios@{GestorHorarios}!change\_class@{change\_class}}
+\index{change\_class@{change\_class}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{change\_class()}{change\_class()}}
+{\footnotesize\ttfamily void change\+\_\+class (\begin{DoxyParamCaption}\item[{string}]{upcode,  }\item[{string}]{class\+\_\+code,  }\item[{string}]{uc\+\_\+code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_af00ef5d5342bfbcd307aec255ab4e480}\label{class_gestor_horarios_af00ef5d5342bfbcd307aec255ab4e480}} 
+\index{GestorHorarios@{GestorHorarios}!estudantes\_num\_ano@{estudantes\_num\_ano}}
+\index{estudantes\_num\_ano@{estudantes\_num\_ano}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{estudantes\_num\_ano()}{estudantes\_num\_ano()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ estudantes\+\_\+num\+\_\+ano (\begin{DoxyParamCaption}\item[{char}]{ano }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_a7315c27fafa0b5b3dbaba98b67e5cec0}\label{class_gestor_horarios_a7315c27fafa0b5b3dbaba98b67e5cec0}} 
+\index{GestorHorarios@{GestorHorarios}!estudantes\_numa\_turma@{estudantes\_numa\_turma}}
+\index{estudantes\_numa\_turma@{estudantes\_numa\_turma}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{estudantes\_numa\_turma()}{estudantes\_numa\_turma()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ estudantes\+\_\+numa\+\_\+turma (\begin{DoxyParamCaption}\item[{string}]{class\+\_\+code,  }\item[{string}]{uc\+\_\+code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_ad03d67daec45e5fe96d9940251e70f10}\label{class_gestor_horarios_ad03d67daec45e5fe96d9940251e70f10}} 
+\index{GestorHorarios@{GestorHorarios}!estudantes\_numa\_uc@{estudantes\_numa\_uc}}
+\index{estudantes\_numa\_uc@{estudantes\_numa\_uc}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{estudantes\_numa\_uc()}{estudantes\_numa\_uc()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ estudantes\+\_\+numa\+\_\+uc (\begin{DoxyParamCaption}\item[{string}]{uc\+\_\+code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_a0885c2912050e5b6380b2a4b3eade6c8}\label{class_gestor_horarios_a0885c2912050e5b6380b2a4b3eade6c8}} 
+\index{GestorHorarios@{GestorHorarios}!find\_class\_code@{find\_class\_code}}
+\index{find\_class\_code@{find\_class\_code}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{find\_class\_code()}{find\_class\_code()}}
+{\footnotesize\ttfamily bool find\+\_\+class\+\_\+code (\begin{DoxyParamCaption}\item[{string}]{class\+\_\+code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_a05830cea2f8febac8456951eab374246}\label{class_gestor_horarios_a05830cea2f8febac8456951eab374246}} 
+\index{GestorHorarios@{GestorHorarios}!find\_student@{find\_student}}
+\index{find\_student@{find\_student}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{find\_student()}{find\_student()}}
+{\footnotesize\ttfamily bool find\+\_\+student (\begin{DoxyParamCaption}\item[{string}]{up }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_a18fec1648fe40dac066594a39d95f91e}\label{class_gestor_horarios_a18fec1648fe40dac066594a39d95f91e}} 
+\index{GestorHorarios@{GestorHorarios}!find\_turma@{find\_turma}}
+\index{find\_turma@{find\_turma}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{find\_turma()}{find\_turma()}}
+{\footnotesize\ttfamily bool find\+\_\+turma (\begin{DoxyParamCaption}\item[{string}]{uc\+\_\+code,  }\item[{string}]{class\+\_\+code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_ac3ffdab3dab15d130d9528a4edc1fd81}\label{class_gestor_horarios_ac3ffdab3dab15d130d9528a4edc1fd81}} 
+\index{GestorHorarios@{GestorHorarios}!find\_uc@{find\_uc}}
+\index{find\_uc@{find\_uc}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{find\_uc()}{find\_uc()}}
+{\footnotesize\ttfamily bool find\+\_\+uc (\begin{DoxyParamCaption}\item[{string}]{uc\+\_\+code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_a5ee43e1cf1bdfd3cdc32ac0b84d45f1b}\label{class_gestor_horarios_a5ee43e1cf1bdfd3cdc32ac0b84d45f1b}} 
+\index{GestorHorarios@{GestorHorarios}!horario\_estudante@{horario\_estudante}}
+\index{horario\_estudante@{horario\_estudante}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{horario\_estudante()}{horario\_estudante()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_class}{Class}} $>$ horario\+\_\+estudante (\begin{DoxyParamCaption}\item[{string}]{up }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_a1a5083c9643fe281ef08d8d57104c452}\label{class_gestor_horarios_a1a5083c9643fe281ef08d8d57104c452}} 
+\index{GestorHorarios@{GestorHorarios}!horario\_turma@{horario\_turma}}
+\index{horario\_turma@{horario\_turma}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{horario\_turma()}{horario\_turma()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_class}{Class}} $>$ horario\+\_\+turma (\begin{DoxyParamCaption}\item[{string}]{class\+\_\+code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_ae9bf94a21be59955e91de88c798866f0}\label{class_gestor_horarios_ae9bf94a21be59955e91de88c798866f0}} 
+\index{GestorHorarios@{GestorHorarios}!horario\_turma\_Uc@{horario\_turma\_Uc}}
+\index{horario\_turma\_Uc@{horario\_turma\_Uc}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{horario\_turma\_Uc()}{horario\_turma\_Uc()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_class}{Class}} $>$ horario\+\_\+turma\+\_\+\+Uc (\begin{DoxyParamCaption}\item[{string}]{class\+\_\+code,  }\item[{string}]{uc\+\_\+code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_a6457081c42591d657aeb17683149067c}\label{class_gestor_horarios_a6457081c42591d657aeb17683149067c}} 
+\index{GestorHorarios@{GestorHorarios}!horario\_Uc@{horario\_Uc}}
+\index{horario\_Uc@{horario\_Uc}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{horario\_Uc()}{horario\_Uc()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_class}{Class}} $>$ horario\+\_\+\+Uc (\begin{DoxyParamCaption}\item[{string}]{uc\+\_\+code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_a0c086985a2affeda661ab45b2be49d8a}\label{class_gestor_horarios_a0c086985a2affeda661ab45b2be49d8a}} 
+\index{GestorHorarios@{GestorHorarios}!numero\_estudantes\_turma@{numero\_estudantes\_turma}}
+\index{numero\_estudantes\_turma@{numero\_estudantes\_turma}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{numero\_estudantes\_turma()}{numero\_estudantes\_turma()}}
+{\footnotesize\ttfamily int numero\+\_\+estudantes\+\_\+turma (\begin{DoxyParamCaption}\item[{string}]{class\+\_\+code,  }\item[{string}]{uc\+\_\+code }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_a70ce62f79adccedaa221af04d81983cd}\label{class_gestor_horarios_a70ce62f79adccedaa221af04d81983cd}} 
+\index{GestorHorarios@{GestorHorarios}!read\_info\_classes@{read\_info\_classes}}
+\index{read\_info\_classes@{read\_info\_classes}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{read\_info\_classes()}{read\_info\_classes()}}
+{\footnotesize\ttfamily void read\+\_\+info\+\_\+classes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_a400883b8f8ab554e556c060594e6ba8f}\label{class_gestor_horarios_a400883b8f8ab554e556c060594e6ba8f}} 
+\index{GestorHorarios@{GestorHorarios}!read\_info\_students@{read\_info\_students}}
+\index{read\_info\_students@{read\_info\_students}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{read\_info\_students()}{read\_info\_students()}}
+{\footnotesize\ttfamily void read\+\_\+info\+\_\+students (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gestor_horarios_a9e59f3e17a3c8c4a3d482c980eb83a89}\label{class_gestor_horarios_a9e59f3e17a3c8c4a3d482c980eb83a89}} 
+\index{GestorHorarios@{GestorHorarios}!read\_info\_uc@{read\_info\_uc}}
+\index{read\_info\_uc@{read\_info\_uc}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{read\_info\_uc()}{read\_info\_uc()}}
+{\footnotesize\ttfamily void read\+\_\+info\+\_\+uc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_gestor_horarios_a68ccf539e047d6673d93bb5d8e0622a3}\label{class_gestor_horarios_a68ccf539e047d6673d93bb5d8e0622a3}} 
+\index{GestorHorarios@{GestorHorarios}!classes@{classes}}
+\index{classes@{classes}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{classes}{classes}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_class}{Class}}$>$ classes\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_gestor_horarios_a8967f9720e564251b062f5ac0b764ed8}\label{class_gestor_horarios_a8967f9720e564251b062f5ac0b764ed8}} 
+\index{GestorHorarios@{GestorHorarios}!students@{students}}
+\index{students@{students}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{students}{students}}
+{\footnotesize\ttfamily set$<$\mbox{\hyperlink{class_student}{Student}}$>$ students\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_gestor_horarios_a5f4c696a138c58dffa5537abd382d9e0}\label{class_gestor_horarios_a5f4c696a138c58dffa5537abd382d9e0}} 
+\index{GestorHorarios@{GestorHorarios}!ucs@{ucs}}
+\index{ucs@{ucs}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{ucs}{ucs}}
+{\footnotesize\ttfamily vector$<$\mbox{\hyperlink{class_uc__turma}{Uc\+\_\+turma}}$>$ ucs\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_gestor_horarios_a96a1aca26160532a77ffd282adfb9109}\label{class_gestor_horarios_a96a1aca26160532a77ffd282adfb9109}} 
+\index{GestorHorarios@{GestorHorarios}!weekDays@{weekDays}}
+\index{weekDays@{weekDays}!GestorHorarios@{GestorHorarios}}
+\doxysubsubsection{\texorpdfstring{weekDays}{weekDays}}
+{\footnotesize\ttfamily const map$<$string, int$>$ week\+Days\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{            \{\textcolor{stringliteral}{"{}Monday"{}}, 1\}, \{\textcolor{stringliteral}{"{}Tuesday"{}}, 2\}, \{\textcolor{stringliteral}{"{}Wednesday"{}}, 3\}, \{\textcolor{stringliteral}{"{}Thursday"{}},4\}, \{\textcolor{stringliteral}{"{}Friday"{}},5\}}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Luis\+Relvas/\+Desktop/\+Projeto1-\/master/\mbox{\hyperlink{_gestor_horarios_8h}{Gestor\+Horarios.\+h}}\item 
+C\+:/\+Users/\+Luis\+Relvas/\+Desktop/\+Projeto1-\/master/\mbox{\hyperlink{_gestor_horarios_8cpp}{Gestor\+Horarios.\+cpp}}\end{DoxyCompactItemize}

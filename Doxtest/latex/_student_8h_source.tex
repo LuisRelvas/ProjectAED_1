@@ -1,0 +1,60 @@
+\hypertarget{_student_8h_source}{}\doxysection{Student.\+h}
+\label{_student_8h_source}\index{C:/Users/LuisRelvas/Desktop/Projeto1-\/master/Student.h@{C:/Users/LuisRelvas/Desktop/Projeto1-\/master/Student.h}}
+\mbox{\hyperlink{_student_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef UNTITLED\_STUDENT\_H}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define UNTITLED\_STUDENT\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_uc__turma_8h}{Uc\_turma.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacestd}{std}};}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_student}{Student}} \{}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{private}:}
+\DoxyCodeLine{17     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_student_a158cbc44f9eca1183fab7eb41e34016b}{up}};}
+\DoxyCodeLine{18     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_student_a8ccf841cb59e451791bcb2e1ac4f1edc}{name}};}
+\DoxyCodeLine{19     vector<Uc\_turma> \mbox{\hyperlink{class_student_a7f1fefcba917265e94bb8fdf6f330bbc}{horario}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \mbox{\hyperlink{class_student_a26ceb532f001722145707442f5f26480}{Student}}();}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_student_a26ceb532f001722145707442f5f26480}{Student}}(\textcolor{keywordtype}{string} \mbox{\hyperlink{class_student_a158cbc44f9eca1183fab7eb41e34016b}{up}});}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_student_a9fd3966a85a978b94257ac8c3749af34}{set\_student\_name}}(\textcolor{keywordtype}{string} \mbox{\hyperlink{class_student_a8ccf841cb59e451791bcb2e1ac4f1edc}{name}});}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_student_a5bb47131fb9709878ff524df12c073bd}{add\_uc\_turma}}(\textcolor{keywordtype}{string} uc\_code, \textcolor{keywordtype}{string} class\_code);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keyword}{const} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_student_ad30161ca6afca74b0385133c4812a673}{get\_student\_up}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keywordtype}{string} \mbox{\hyperlink{class_student_a53d39e8a734a838222a74bc82de0b4ae}{get\_student\_name}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     vector<Uc\_turma> \mbox{\hyperlink{class_student_ae6001a920d3714229a5d80eaecf6d4e6}{get\_Uc\_turma}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_student_ac5c6fd57d42a777c295404a25f1b24d2}{check\_class}}(\textcolor{keywordtype}{string} uc\_code, \textcolor{keywordtype}{string} class\_code) \textcolor{keyword}{const};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_student_ad8b2a012864b97c3a0ef350d7a23a82d}{check\_uc}}(\textcolor{keywordtype}{string} uc\_code) \textcolor{keyword}{const}; \textcolor{comment}{// vẽ se o estudante tem a uc}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_student_a87885ac7c698185e0a0c664850765357}{check\_ano}}(\textcolor{keywordtype}{char} ano) \textcolor{keyword}{const}; \textcolor{comment}{// vê se o estudante frequenta o ano}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_student_a2112be488ddd1111a77721480ca09a3b}{operator==}}(\mbox{\hyperlink{class_student}{Student}} student);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_student_ab5b6820af53254d4c6d430effe7d1704}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_student}{Student}}\& student);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_student_a132c0b1601b124ea4a874c92654b2cc1}{update\_class\_code}}(\textcolor{keywordtype}{string} class\_code, \textcolor{keywordtype}{string} uc\_code);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacestd}{std}}\{}
+\DoxyCodeLine{52     \textcolor{keyword}{template}<>}
+\DoxyCodeLine{53     \textcolor{keyword}{struct }less<\mbox{\hyperlink{class_student}{Student}}>\{}
+\DoxyCodeLine{54         \textcolor{keywordtype}{bool} operator() (\textcolor{keyword}{const} \mbox{\hyperlink{class_student}{Student}} \&lhs, \textcolor{keyword}{const} \mbox{\hyperlink{class_student}{Student}} \&rhs) \{}
+\DoxyCodeLine{55             \textcolor{keywordflow}{return} lhs.\mbox{\hyperlink{class_student_ad30161ca6afca74b0385133c4812a673}{get\_student\_up}}() < rhs.\mbox{\hyperlink{class_student_ad30161ca6afca74b0385133c4812a673}{get\_student\_up}}();}
+\DoxyCodeLine{56         \}\};}
+\DoxyCodeLine{57 \}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//UNTITLED\_STUDENT\_H}}
+
+\end{DoxyCode}

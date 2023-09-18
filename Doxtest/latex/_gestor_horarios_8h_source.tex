@@ -1,0 +1,54 @@
+\hypertarget{_gestor_horarios_8h_source}{}\doxysection{Gestor\+Horarios.\+h}
+\label{_gestor_horarios_8h_source}\index{C:/Users/LuisRelvas/Desktop/Projeto1-\/master/GestorHorarios.h@{C:/Users/LuisRelvas/Desktop/Projeto1-\/master/GestorHorarios.h}}
+\mbox{\hyperlink{_gestor_horarios_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef UNTITLED\_GESTORHORARIOS\_H}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#define UNTITLED\_GESTORHORARIOS\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_student_8h}{Student.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_class_8h}{Class.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_uc__turma_8h}{Uc\_turma.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <set>}}
+\DoxyCodeLine{19 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespacestd}{std}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_gestor_horarios}{GestorHorarios}} \{}
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24     set<Student> \mbox{\hyperlink{class_gestor_horarios_a8967f9720e564251b062f5ac0b764ed8}{students}};}
+\DoxyCodeLine{25     vector<Class> \mbox{\hyperlink{class_gestor_horarios_a68ccf539e047d6673d93bb5d8e0622a3}{classes}};}
+\DoxyCodeLine{26     vector<Uc\_turma> \mbox{\hyperlink{class_gestor_horarios_a5f4c696a138c58dffa5537abd382d9e0}{ucs}};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keyword}{static} \textcolor{keyword}{inline} \textcolor{keyword}{const} map<string, int> \mbox{\hyperlink{class_gestor_horarios_a96a1aca26160532a77ffd282adfb9109}{weekDays}}\{}
+\DoxyCodeLine{31             \{\textcolor{stringliteral}{"{}Monday"{}}, 1\}, \{\textcolor{stringliteral}{"{}Tuesday"{}}, 2\}, \{\textcolor{stringliteral}{"{}Wednesday"{}}, 3\}, \{\textcolor{stringliteral}{"{}Thursday"{}},4\}, \{\textcolor{stringliteral}{"{}Friday"{}},5\}}
+\DoxyCodeLine{32     \};}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_horarios_a400883b8f8ab554e556c060594e6ba8f}{read\_info\_students}}();}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_horarios_a70ce62f79adccedaa221af04d81983cd}{read\_info\_classes}}();}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_horarios_a9e59f3e17a3c8c4a3d482c980eb83a89}{read\_info\_uc}}();}
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_gestor_horarios_a0c086985a2affeda661ab45b2be49d8a}{numero\_estudantes\_turma}}(\textcolor{keywordtype}{string} class\_code, \textcolor{keywordtype}{string} uc\_code); \textcolor{comment}{//aqui considero que para cada aula existe um turma}}
+\DoxyCodeLine{37     vector<Class> \mbox{\hyperlink{class_gestor_horarios_a5ee43e1cf1bdfd3cdc32ac0b84d45f1b}{horario\_estudante}}(\textcolor{keywordtype}{string} up);}
+\DoxyCodeLine{38     vector<Class> \mbox{\hyperlink{class_gestor_horarios_a1a5083c9643fe281ef08d8d57104c452}{horario\_turma}}(\textcolor{keywordtype}{string} class\_code);}
+\DoxyCodeLine{39     vector<Class> \mbox{\hyperlink{class_gestor_horarios_a6457081c42591d657aeb17683149067c}{horario\_Uc}}(\textcolor{keywordtype}{string} uc\_code);}
+\DoxyCodeLine{40     vector<Class> \mbox{\hyperlink{class_gestor_horarios_ae9bf94a21be59955e91de88c798866f0}{horario\_turma\_Uc}}(\textcolor{keywordtype}{string} class\_code, \textcolor{keywordtype}{string} uc\_code);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_gestor_horarios_a05830cea2f8febac8456951eab374246}{find\_student}}(\textcolor{keywordtype}{string} up);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_gestor_horarios_ac3ffdab3dab15d130d9528a4edc1fd81}{find\_uc}}(\textcolor{keywordtype}{string} uc\_code);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_gestor_horarios_a18fec1648fe40dac066594a39d95f91e}{find\_turma}}(\textcolor{keywordtype}{string} uc\_code, \textcolor{keywordtype}{string} class\_code); \textcolor{comment}{//verifica se a turma existe (turma = cada aula uma turma)}}
+\DoxyCodeLine{44     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_gestor_horarios_a0885c2912050e5b6380b2a4b3eade6c8}{find\_class\_code}}(\textcolor{keywordtype}{string} class\_code);}
+\DoxyCodeLine{45     vector<Student> \mbox{\hyperlink{class_gestor_horarios_ad03d67daec45e5fe96d9940251e70f10}{estudantes\_numa\_uc}}(\textcolor{keywordtype}{string} uc\_code);}
+\DoxyCodeLine{46     vector<Student> \mbox{\hyperlink{class_gestor_horarios_a7315c27fafa0b5b3dbaba98b67e5cec0}{estudantes\_numa\_turma}}(\textcolor{keywordtype}{string} class\_code, \textcolor{keywordtype}{string} uc\_code);}
+\DoxyCodeLine{47     vector<Student> \mbox{\hyperlink{class_gestor_horarios_af00ef5d5342bfbcd307aec255ab4e480}{estudantes\_num\_ano}}(\textcolor{keywordtype}{char} ano);}
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_gestor_horarios_aac4f2ee6057f614bc0bc0e7247d83406}{change\_class}}(\textcolor{keywordtype}{string} upcode,\textcolor{keywordtype}{string} class\_code, \textcolor{keywordtype}{string} uc\_code);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//UNTITLED\_GESTORHORARIOS\_H}}
+
+\end{DoxyCode}
